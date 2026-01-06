@@ -1,0 +1,188 @@
+\documentclass[a4paper,11pt]{book}
+
+% =====================================================
+% LANGUAGE AND ENCODING
+% =====================================================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel} % change language if needed
+
+% =====================================================
+% TYPOGRAPHY 
+% =====================================================
+\usepackage{libertinus}          % main serif font + math
+\usepackage[scale=0.95]{sourcesanspro} % sans-serif for metadata
+
+\usepackage{microtype}
+\usepackage{xcolor}
+
+% -----------------------------------------------------
+% Color palette (customize if needed)
+% -----------------------------------------------------
+\definecolor{Accent}{HTML}{0B3A3E}
+\definecolor{TextGray}{gray}{0.25}
+\definecolor{RuleGray}{gray}{0.75}
+
+% =====================================================
+% PAGE LAYOUT
+% =====================================================
+\usepackage{geometry}
+\geometry{a4paper, top=28mm, bottom=30mm, left=30mm, right=30mm}
+
+\usepackage{setspace}
+\setstretch{1.12}
+
+\clubpenalty=10000
+\widowpenalty=10000
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{2}
+
+% =====================================================
+% HEADERS AND FOOTERS
+% =====================================================
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[LO]{\nouppercase{\rightmark}}
+\fancyhead[RE]{\nouppercase{\leftmark}}
+\setlength{\headheight}{15pt}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% =====================================================
+% HYPERLINKS AND URLS
+% =====================================================
+\usepackage{xurl} % improves line breaking of long URLs
+\usepackage[hidelinks]{hyperref}
+
+% =====================================================
+% OPTIONAL GRAPHICS AND FIGURES
+% (enable only if needed)
+% =====================================================
+\usepackage{graphicx}   % images
+% \usepackage{wrapfig}  % text wrapping around figures
+% \usepackage{subcaption}
+% \usepackage{float}
+
+% =====================================================
+% OPTIONAL TABLES
+% =====================================================
+\usepackage{booktabs}
+
+% =====================================================
+% OPTIONAL CODE LISTINGS
+% (enable only if the document contains source code)
+% =====================================================
+% \usepackage{listings}
+% \usepackage[scaled=0.9]{beramono}
+
+% =====================================================
+% MATHEMATICS
+% =====================================================
+\usepackage{amsmath,amssymb,amsthm}
+\numberwithin{equation}{chapter}
+
+% =====================================================
+% OPTIONAL LIST CUSTOMIZATION
+% =====================================================
+\usepackage{enumitem}
+\setlist[itemize]{topsep=4pt, itemsep=3pt}
+\setlist[enumerate]{topsep=4pt, itemsep=3pt}
+\setlist[description]{font=\normalfont\bfseries, labelsep=0.6em, leftmargin=2em}
+
+% =====================================================
+% OPTIONAL BOXES (definitions, theorems, notes)
+% =====================================================
+% \usepackage[most]{tcolorbox}
+% \usepackage{chngcntr}
+
+% =====================================================
+% DOCUMENT METADATA (CUSTOMIZE)
+% =====================================================
+\newcommand{\BookTitle}{Document Title}
+\newcommand{\BookSubtitle}{Optional subtitle}
+\newcommand{\BookAuthor}{Author Name}
+\newcommand{\BookYear}{Academic Year}
+
+% Logo path (use only if a logo is required)
+% \newcommand{\BookLogoPath}{images/logo.jpg}
+
+% =====================================================
+% OPTIONAL COVER BACKGROUND (TikZ pattern)
+% Enable only if you want a graphical cover
+% =====================================================
+% \usepackage{tikz}
+% \usetikzlibrary{calc,positioning}
+%
+% \newcommand{\DataPattern}{
+%   % Decorative background for the title page
+% }
+
+\begin{document}
+
+\frontmatter
+
+% =====================================================
+% TITLE PAGE (TEMPLATE)
+% Customize or replace entirely if needed
+% =====================================================
+\begin{titlepage}
+\thispagestyle{empty}
+
+% \DataPattern % enable if using a graphical background
+
+\begin{center}
+\vspace*{18mm}
+
+{\fontsize{28}{34}\selectfont\bfseries\color{Accent} \BookTitle\par}
+
+\vspace{7mm}
+{\color{Accent}\rule{0.66\textwidth}{1.1pt}}
+
+\vspace{10mm}
+{\Large\sffamily\color{TextGray}\BookSubtitle\par}
+
+\vspace{20mm}
+
+% Optional logo
+% \includegraphics[height=14mm]{\BookLogoPath}
+
+\vfill
+
+{\sffamily\small\color{TextGray}
+\BookAuthor \hfill \BookYear
+}
+
+\vspace*{6mm}
+\end{center}
+\end{titlepage}
+
+% =====================================================
+% OPTIONAL FRONT MATTER
+% Use only if needed
+% =====================================================
+
+% \include{frontmatter/preface}   % use if a preface is required
+% \include{frontmatter/license}   % use if a license chapter is required
+
+% =====================================================
+% TABLE OF CONTENTS
+% =====================================================
+\tableofcontents
+\cleardoublepage
+
+% =====================================================
+% MAIN CONTENT
+% =====================================================
+\mainmatter
+
+% \include{chapters/chapter1}
+% \include{chapters/chapter2}
+
+% =====================================================
+% BACK MATTER
+% =====================================================
+\backmatter
+
+\end{document}
